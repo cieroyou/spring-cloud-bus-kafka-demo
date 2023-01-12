@@ -1,0 +1,5 @@
+rootProject.name = 'spring-cloud-bus-kafka-demo'
+include 'spring-cloud-bus-client1'
+include 'spring-cloud-bus-config-server'
+include 'spring-cloud-bus-client2'
+

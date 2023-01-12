@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: client2
+  cloud:
+    bus:
+      trace:
+#        ㅂㅓ스이벤트(RemoteApplicationEvent) 를 설정하여 추ㅊ적 가능
+        enabled: true
+
+server:
+  port: 18081

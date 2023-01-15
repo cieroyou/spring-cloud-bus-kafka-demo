@@ -1,18 +1,19 @@
 package com.sera.busevent;
 
-import org.springframework.cloud.bus.event.Destination;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import org.springframework.cloud.bus.event.PathDestinationFactory;
 import org.springframework.cloud.bus.event.RemoteApplicationEvent;
 
+@Getter
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class MyEvent extends RemoteApplicationEvent {
-//    private final String BIZ_ID = "maxst";
-//    private final String userId;
-//    private final Boolean emailYn;
-//
-//
-//    public MyEvent(Object source, String originService, String destination, String userId, Boolean emailYn) {
-//        super(source, originService, DEFAULT_DESTINATION_FACTORY.getDestination(destination));
-//        this.userId = userId;
-//        this.emailYn = emailYn;
-//    }
+    private String message;
+
+    public MyEvent(Object source, String originService, String destination, String message) {
+        super(source, originService, new PathDestinationFactory().getDestination(destination));
+        this.message = message;
+    }
 
 }

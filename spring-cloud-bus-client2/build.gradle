@@ -24,7 +24,7 @@ tasks.named('test') {
 }
 
 ext {
-    springCloudVersion = "2021.0.5"
+    springCloudVersion = "2022.0.0"
 }
 
 dependencyManagement {

@@ -2,12 +2,13 @@ spring:
   application:
     name: client1
 
-  cloud:
-    bus:
-      trace:
-        enabled: false
-      enabled: true
-
-
+#  cloud:
+#    bus:
+#      trace:
+#        enabled: false
+#      enabled: true
+#
+#
 server:
   port: 18080
+

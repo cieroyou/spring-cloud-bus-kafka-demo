@@ -13,7 +13,6 @@ public class SpringBusKafkaClientApplication {
     @Bean
     public ApplicationRunner runner(RemoteEventPublisher newTopicProducer) {
         return args -> {
-            newTopicProducer.publishMyEvent();
         };
     }
 }
